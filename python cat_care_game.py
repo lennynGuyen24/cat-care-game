@@ -50,9 +50,16 @@ sad = '''
         _.-'_./   {_.'   ; /
        {_.-``-'         {_/
 '''
+choked = '''
+ _._     _,-'""`-._
+     (,-.`._,'(       |\`-/|
+         `-.-' \ )-`( , o o)
+               `-    \`_`"'-
+'''
+
 print("Welcome to the Cat Care game")
 print("Your mission is to pleased the hungry cat")
-game_imgs =[bug, happy, sad]
+game_imgs =[bug, happy, sad, choked]
 choice1 = input(
     "You are being with your cat, do you want to feed it with a fish or a bug? Type 'fish' or 'bug' \n"
 ).lower()
@@ -77,13 +84,14 @@ if choice1 == 'fish':
                 print(game_imgs[2])
                 print("Oops...Your cat doesn't like the shower. Game over.")
             else:
-                print(game_imgs[0])
+                print(game_imgs[3])
                 print("Your cat got choked by eating the plastic toy bug. Game over.")
         else:
+            print(game_imgs[2])
             print("Your cat is not pleased. Game over.")
     else:
         print(game_imgs[2])
         print("Your cat is allerged to sardine. She is sick. Game over.")
 else:
-    print(game_imgs[2])
+    print(game_imgs[3])
     print("Your cat has a stomach ache and is not happy. Game over.")
